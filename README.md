@@ -1,6 +1,6 @@
-# Frames Interfaces
+# Frame Interface Guidelines vanilla implementation
 
-A vanilla implementation of Paradign Frame Interface Guidelines
+A vanilla implementation of Paradigm Frame Interface Guidelines. Works with FramesJS and Frog.
 https://www.figma.com/community/file/1367670879509913267/frame-interface-guidelines
 
 ### How to use

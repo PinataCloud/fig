@@ -1,7 +1,6 @@
 import { createFrames, Button } from "frames.js/cloudflare-workers";
 import {imageOptionsUtils} from "./interfaces/utils";
 import {LinkPreview} from "./interfaces/layouts";
-import {Container, Text, Title, Caption} from "./interfaces/components";
 
 type Env = {
   /**
@@ -18,25 +17,25 @@ const getInterface = (interfaceNo: number) => {
       return <LinkPreview
         title="LinkPreview N1"
         description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
-        url="https://shorturl.at/tCDLN"
+        url="https://github.com/PinataCloud/fig"
       />;
     case 2:
       return <LinkPreview
         title="LinkPreview N2"
         description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
-        url="https://shorturl.at/tCDLN"
+        url="https://github.com/PinataCloud/fig"
       />;
     case 3:
       return <LinkPreview
         title="LinkPreview N3"
         description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
-        url="https://shorturl.at/tCDLN"
+        url="https://github.com/PinataCloud/fig"
       />;
     default:
       return <LinkPreview
         title="LinkPreview N1"
         description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
-        url="https://shorturl.at/tCDLN"
+        url="https://github.com/PinataCloud/fig"
       />;
   }
 }
@@ -60,12 +59,12 @@ const fetch = frames(async (ctx) => {
       return {
         image: getInterface(interfaceNo),
         imageOptions: { ...imageOptionsUtil.imageOptions },
-        textInput: "Interface No e.g. 1",
+        textInput: "Interface Nº e.g. 1",
         buttons: [
-          <Button action={"post"}>Preview Interface</Button>,
+          <Button action={"post"}>Preview Nº</Button>,
           <Button action={"post"}  target={{ query: { howto: true } }}>How to use?</Button>,
           <Button action={"link"} target={"https://www.figma.com/community/file/1367670879509913267"}>Figma</Button>,
-          <Button action={"link"} target={"https://www.figma.com/community/file/1367670879509913267"}>Github</Button>,
+          <Button action={"link"} target={"https://github.com/PinataCloud/fig"}>Github</Button>,
         ],
       };
   }
@@ -73,18 +72,18 @@ const fetch = frames(async (ctx) => {
   return {
     image: (
       <LinkPreview
-        title="Frames Interfaces"
-        description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
-        url="https://shorturl.at/tCDLN"
+        title="Frame Interface Guidelines"
+        description="Check out the Figma and Github links for more information. Enter a Nº below to preview the corresponding interface"
+        url="https://github.com/PinataCloud/fig"
       />
     ),
     imageOptions: { ...imageOptionsUtil.imageOptions },
-    textInput: "Interface No e.g. 1",
+    textInput: "Interface Nº e.g. 1",
     buttons: [
-      <Button action={"post"}>Preview Interface</Button>,
+      <Button action={"post"}>Preview Nº</Button>,
       <Button action={"post"}  target={{ query: { howto: true } }}>How to use?</Button>,
       <Button action={"link"} target={"https://www.figma.com/community/file/1367670879509913267"}>Figma</Button>,
-      <Button action={"link"} target={"https://www.figma.com/community/file/1367670879509913267"}>Github</Button>,
+      <Button action={"link"} target={"https://github.com/PinataCloud/fig"}>Github</Button>,
     ],
   };
 });
