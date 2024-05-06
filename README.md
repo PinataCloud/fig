@@ -4,7 +4,7 @@ A vanilla implementation of Paradigm Frame Interface Guidelines. Works with Fram
 https://www.figma.com/community/file/1367670879509913267/frame-interface-guidelines
 
 ### How to use
-Copy the folder interfaces to your project and import the components you need.
+Copy the folder `src/interfaces` into your project and import the components you need.
 
 This implementation leverages Satori, making it compatible with frameworks like FramesJS and Frog.
 
