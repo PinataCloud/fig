@@ -1,6 +1,7 @@
 import { createFrames, Button } from "frames.js/cloudflare-workers";
 import {imageOptionsUtils} from "./interfaces/utils";
 import {LinkPreview} from "./interfaces/layouts";
+import {LinkPreviewFavico} from "./interfaces/layouts/link_preview_favico";
 
 type Env = {
   /**
@@ -20,21 +21,16 @@ const getInterface = (interfaceNo: number) => {
         url="https://github.com/PinataCloud/fig"
       />;
     case 2:
-      return <LinkPreview
-        title="LinkPreview N2"
+      return <LinkPreviewFavico
+        title="Link title goes here"
         description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
         url="https://github.com/PinataCloud/fig"
-      />;
-    case 3:
-      return <LinkPreview
-        title="LinkPreview N3"
-        description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
-        url="https://github.com/PinataCloud/fig"
+        icon={{name: "academic-cap", size: 80, color: "white"}}
       />;
     default:
       return <LinkPreview
-        title="LinkPreview N1"
-        description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
+        title="Only two interfaces available"
+        description="The rest of the layouts will be added this week."
         url="https://github.com/PinataCloud/fig"
       />;
   }

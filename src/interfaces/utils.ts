@@ -1,21 +1,21 @@
 export const imageOptionsUtils = async () => {
-  const notoSemiBoldFont = await fetch("https://fonts.cdnfonts.com/s/15794/NotoSans-Bold.woff")
+  const interSemiBoldFont = await fetch("https://fonts.cdnfonts.com/s/19795/Inter-SemiBold.woff")
     .then((res) => res.arrayBuffer());
 
-  const notoFont = await fetch("https://fonts.cdnfonts.com/s/15794/NotoSans-Regular.woff")
+  const interFont = await fetch("https://fonts.cdnfonts.com/s/19795/Inter-Regular.woff")
     .then((res) => res.arrayBuffer());
 
   return {
     imageOptions: {
       fonts: [
         {
-          name: "Noto Sans",
-          data: notoSemiBoldFont,
+          name: "Inter",
+          data: interSemiBoldFont,
           weight: <600> 600,
         },
         {
-          name: "Noto Sans",
-          data: notoFont,
+          name: "Inter",
+          data: interFont,
           weight: <400> 400,
         }
       ]

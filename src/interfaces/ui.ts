@@ -37,3 +37,11 @@ export const captionStyles = {
   padding: 0,
   marginTop: 12,
 }
+
+export const iconContainerStyles = {
+  display: "flex",
+  backgroundColor: '#878787',
+  borderRadius: 29,
+  padding: 24,
+  margin: 0
+}

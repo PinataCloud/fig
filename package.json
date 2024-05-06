@@ -6,7 +6,8 @@
   "private": true,
   "dependencies": {
     "frames.js": "^0.15.1",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "frog": "latest"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.1.0",
