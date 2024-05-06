@@ -18,7 +18,9 @@ export const imageOptionsUtils = async () => {
           data: interFont,
           weight: <400> 400,
         }
-      ]
+      ],
+      width: 1200,
+      height: 628,
     }
   }
 }

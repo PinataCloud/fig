@@ -1,7 +1,6 @@
 import { createFrames, Button } from "frames.js/cloudflare-workers";
 import {imageOptionsUtils} from "./interfaces/utils";
-import {LinkPreview} from "./interfaces/layouts";
-import {LinkPreviewFavico} from "./interfaces/layouts/link_preview_favico";
+import {LinkPreview, LinkPreviewFavico, LinkPreviewBg} from "./interfaces/layouts";
 
 type Env = {
   /**
@@ -26,6 +25,13 @@ const getInterface = (interfaceNo: number) => {
         description="The basic layout with an icon to catch the eye. Description goes here."
         url="https://github.com/PinataCloud/fig"
         icon={{name: "academic-cap", size: 80, color: "white"}}
+      />;
+    case 3:
+      return <LinkPreviewBg
+        title="LinkPreviewBg"
+        description="The basic layout with a Background Image. Description goes here."
+        url="https://github.com/PinataCloud/fig"
+        backgroundUrl={"https://assets.pinatadrops.com/fig_bg.png"}
       />;
     default:
       return <LinkPreview

@@ -1,17 +1,17 @@
 export const containerStyles = {
-  alignItems: 'center',
   backgroundColor: '#1A1A1A',
   backgroundSize: '100% 100%',
   display: 'flex',
   flexDirection: 'column',
   flexWrap: 'nowrap',
   height: '100%',
-  justifyContent: 'center',
-  textAlign: 'center',
   width: '100%',
   color: "white",
   fontSize: 35,
-  padding: 78
+  padding: 78,
+  alignItems: "flex-start",
+  textAlign: "left",
+  justifyContent: "flex-end"
 }
 
 export const titleStyles = {
@@ -44,4 +44,15 @@ export const iconContainerStyles = {
   borderRadius: 29,
   padding: 24,
   margin: 0
+}
+
+export const backgroundImgStyles = {
+  display: "flex",
+  width: 600,
+  height: 300,
+  position: "absolute",
+  opacity: 0.5,
+  zIndex: -1,
+  top: 0,
+  left: 0
 }
