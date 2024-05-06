@@ -14,3 +14,5 @@ This lightweight approach offers flexibility, allowing you to directly integrate
     <Title style={{ color: 'red' }}>Hello World</Title>
 </Container>
 ```
+
+![image](https://assets.pinatadrops.com/fig-instructions.png)

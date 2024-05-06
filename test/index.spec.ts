@@ -5,7 +5,7 @@
   SELF,
 } from "cloudflare:test";*/
 import { describe, it, expect, vi } from "vitest";
-import worker from "../src/index";
+import worker from "../src";
 import { ExecutionContext } from "@cloudflare/workers-types";
 
 vi.mock("@vercel/og", () => {

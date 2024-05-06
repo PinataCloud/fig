@@ -1,5 +1,5 @@
 {
-  "name": "my-cf-frames",
+  "name": "frames-interfaces",
   "description": "Simple Cloudflare Worker template with Frames.js, React and TypeScript",
   "version": "0.0.9",
   "type": "module",
