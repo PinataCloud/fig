@@ -16,13 +16,13 @@ const getInterface = (interfaceNo: number) => {
   switch (interfaceNo) {
     case 1:
       return <LinkPreview
-        title="LinkPreview N1"
+        title="<LinkPreview />"
         description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
         url="https://github.com/PinataCloud/fig"
       />;
     case 2:
       return <LinkPreviewFavico
-        title="Link title goes here"
+        title="<LinkPreviewFavico />"
         description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
         url="https://github.com/PinataCloud/fig"
         icon={{name: "academic-cap", size: 80, color: "white"}}
@@ -68,8 +68,8 @@ const fetch = frames(async (ctx) => {
   return {
     image: (
       <LinkPreview
-        title="Frame Interface Guidelines"
-        description="Check out the Figma and Github links for more information. Enter a Nº below to preview the corresponding interface"
+        title="Frame Interface Guidelines (FIG)"
+        description="Vanilla implementation of FIG with regular css and jsx. Works with framesjs and frog"
         url="https://github.com/PinataCloud/fig"
       />
     ),
