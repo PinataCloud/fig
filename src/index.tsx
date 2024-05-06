@@ -16,14 +16,14 @@ const getInterface = (interfaceNo: number) => {
   switch (interfaceNo) {
     case 1:
       return <LinkPreview
-        title="<LinkPreview />"
-        description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
+        title="LinkPreview"
+        description="The most basic layout. Description goes here."
         url="https://github.com/PinataCloud/fig"
       />;
     case 2:
       return <LinkPreviewFavico
-        title="<LinkPreviewFavico />"
-        description="Frame Interface Guidelines. Check out the Figma and Github links for more information."
+        title="LinkPreviewFavico"
+        description="The basic layout with an icon to catch the eye. Description goes here."
         url="https://github.com/PinataCloud/fig"
         icon={{name: "academic-cap", size: 80, color: "white"}}
       />;
