@@ -30,6 +30,16 @@ export const textStyles = {
   marginTop: 12,
 }
 
+export const chipStyles = {
+  backgroundColor: '#454545',
+  borderRadius: 80,
+  margin: 0,
+  fontSize: 32,
+  padding: 17,
+  paddingRight: 27,
+  paddingLeft: 27,
+}
+
 export const captionStyles = {
   fontSize: 40,
   color: "#A1A1A1",
@@ -53,6 +63,6 @@ export const backgroundImgStyles = {
   position: "absolute",
   opacity: 0.5,
   zIndex: -1,
-  top: 0,
-  left: 0
+  top: "25%",
+  left: "25%"
 }
