@@ -4,17 +4,17 @@ import {BackgroundImage} from "../components/backgroundImage";
 interface LinkPreviewProps {
   title: string;
   description: string;
-  url: string;
+  caption: string;
   backgroundUrl: string;
 }
 
-export const LinkPreviewBg = ({ title, description, url, backgroundUrl }: LinkPreviewProps) => {
+export const LinkPreviewBg = ({ title, description, caption, backgroundUrl }: LinkPreviewProps) => {
   return (
     <Container>
       <BackgroundImage backgroundUrl={backgroundUrl} />
       <Title>{title}</Title>
       <Text>{description}</Text>
-      <Caption>{url}</Caption>
+      <Caption>{caption}</Caption>
     </Container>
   )
 }

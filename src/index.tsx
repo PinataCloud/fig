@@ -2,6 +2,7 @@ import { createFrames, Button } from "frames.js/cloudflare-workers";
 import {imageOptionsUtils} from "./interfaces/utils";
 import {LinkPreview, LinkPreviewFavico, LinkPreviewBg} from "./interfaces/layouts";
 import {Splash} from "./interfaces/layouts/splash";
+import {Transaction} from "./interfaces/layouts/transaction";
 
 type Env = {
   /**
@@ -18,29 +19,35 @@ const getInterface = (interfaceNo: number) => {
       return <LinkPreview
         title="LinkPreview"
         description="The most basic layout. Description goes here."
-        url="https://github.com/PinataCloud/fig"
+        caption="https://github.com/PinataCloud/fig"
       />;
     case 2:
       return <LinkPreviewFavico
         title="LinkPreviewFavico"
         description="The basic layout with an icon to catch the eye. Description goes here."
-        url="https://github.com/PinataCloud/fig"
+        caption="https://github.com/PinataCloud/fig"
         icon={{name: "academic-cap", size: 80, color: "white"}}
       />;
     case 3:
       return <LinkPreviewBg
         title="LinkPreviewBg"
         description="The basic layout with a Background Image. Description goes here."
-        url="https://github.com/PinataCloud/fig"
+        caption="https://github.com/PinataCloud/fig"
         backgroundUrl={"https://assets.pinatadrops.com/fig_bg.png"}
       />;
     case 4:
       return <Splash
         title="Splash"
         description="Favicon layout plus a chip with extra information about the frame action."
-        url="https://github.com/PinataCloud/fig"
         icon={{name: "academic-cap", size: 80, color: "white"}}
         chipText="Link to App"
+      />;
+    case 5:
+      return <Transaction
+        title="Transaction"
+        description="Favicon layout plus a chip with extra information about the frame action."
+        txDetails={{network: "Ethereum", amount: 0.1, currency: "ETH", recipient: "0x1234567890"}}
+        chipText="Transaction"
       />;
     default:
       return <LinkPreview
