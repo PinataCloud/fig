@@ -1,6 +1,8 @@
-import { createFrames, Button } from "frames.js/cloudflare-workers";
 import {imageOptionsUtils} from "./interfaces/utils";
 import {LinkPreview, LinkPreviewFavico, LinkPreviewBg} from "./interfaces/layouts";
+import { createFrames, Button } from 'frames.js/hono';
+import { Hono } from 'hono';
+import { serve } from "@hono/node-server";
 
 type Env = {
   /**
@@ -9,6 +11,7 @@ type Env = {
   MY_APP_LABEL: string;
 };
 
+const app = new Hono();
 const frames = createFrames<Env>();
 
 const getInterface = (interfaceNo: number) => {
@@ -42,7 +45,7 @@ const getInterface = (interfaceNo: number) => {
   }
 }
 
-const fetch = frames(async (ctx) => {
+const handleRequest = frames(async (ctx) => {
   const howTo = !!(ctx.message && ctx.searchParams.howto);
   const imageOptionsUtil = await imageOptionsUtils();
 
@@ -90,6 +93,14 @@ const fetch = frames(async (ctx) => {
   };
 });
 
-export default {
-  fetch,
-} satisfies ExportedHandler<Env>;
+app.get('/', handleRequest);
+app.post('/', handleRequest);
+
+// expose app for `@hono/vite-dev-server`
+export default app;
+
+if (process.env.NODE_ENV === 'production') {
+  serve({ ...app, port: 3000 }, info => {
+    console.log(`Server running on http://localhost:${info.port}`);
+  })
+}
