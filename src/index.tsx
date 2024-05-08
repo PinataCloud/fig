@@ -4,6 +4,7 @@ import {LinkPreview, LinkPreviewFavico, LinkPreviewBg} from "./interfaces/layout
 import {Splash} from "./interfaces/layouts/splash";
 import {Transaction} from "./interfaces/layouts/transaction";
 import {TransactionItem} from "./interfaces/components/transactionItem";
+import {ActionValidation} from "./interfaces/layouts/action_validation";
 
 type Env = {
   /**
@@ -59,11 +60,19 @@ const getInterface = (interfaceNo: number) => {
           0x1234...5678
         </TransactionItem>
       </Transaction>;
+    case 6:
+      return <ActionValidation description={'Your payment succeeded'} type={'success'} />
+    case 7:
+      return <ActionValidation description={"Not enough gas for transaction"} type={'error'} />
+    case 8:
+      return <ActionValidation description={"Network busy, this may take a while"} type={'warning'} />
+    case 9:
+      return <ActionValidation description={"You can also pay with $DEGEN"} type={'info'} />
     default:
       return <LinkPreview
         title="Only a few interfaces available yet"
         description="The rest of the layouts will be added this week."
-        url="https://github.com/PinataCloud/fig"
+        caption="https://github.com/PinataCloud/fig"
       />;
   }
 }

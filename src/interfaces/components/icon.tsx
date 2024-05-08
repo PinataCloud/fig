@@ -6,10 +6,11 @@ interface IconProps {
   color?: string;
   size?: number;
   collection?: "heroicons" | "lucide" | "radix-icons";
+  style: any;
 }
 
 export const Icon = (props: IconProps) => {
-  const {name, color, size} = props;
+  const {name, color, size, style} = props;
   const iconMap = icons[props.collection || "heroicons"];
   let text: string = iconMap[name as keyof typeof iconMap]
 
@@ -18,7 +19,7 @@ export const Icon = (props: IconProps) => {
   }
 
   return (
-    <div style={iconContainerStyles}>
+    <div style={{...iconContainerStyles, ...style}}>
       <div
         style={{
           display: "flex",
