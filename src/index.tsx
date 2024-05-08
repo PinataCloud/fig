@@ -3,6 +3,7 @@ import {imageOptionsUtils} from "./interfaces/utils";
 import {LinkPreview, LinkPreviewFavico, LinkPreviewBg} from "./interfaces/layouts";
 import {Splash} from "./interfaces/layouts/splash";
 import {Transaction} from "./interfaces/layouts/transaction";
+import {TransactionItem} from "./interfaces/components/transactionItem";
 
 type Env = {
   /**
@@ -46,12 +47,21 @@ const getInterface = (interfaceNo: number) => {
       return <Transaction
         title="Transaction"
         description="Favicon layout plus a chip with extra information about the frame action."
-        txDetails={{network: "Ethereum", amount: 0.1, currency: "ETH", recipient: "0x1234567890"}}
-        chipText="Transaction"
-      />;
+        chipText="Transaction">
+        <TransactionItem style={{borderRight: "1px solid white"}} title={"Network"}>
+          <i style={{width: 50, height: 50, borderRadius: "50%", backgroundColor: "#878787"}}/>
+          Ethereum
+        </TransactionItem>
+        <TransactionItem style={{borderRight: "1px solid white", marginLeft: 42}} title={"Amount"}>
+           0.0015 ETH
+        </TransactionItem>
+        <TransactionItem style={{marginLeft: 42}} title={"Recipient"}>
+          0x1234...5678
+        </TransactionItem>
+      </Transaction>;
     default:
       return <LinkPreview
-        title="Only two interfaces available"
+        title="Only a few interfaces available yet"
         description="The rest of the layouts will be added this week."
         url="https://github.com/PinataCloud/fig"
       />;

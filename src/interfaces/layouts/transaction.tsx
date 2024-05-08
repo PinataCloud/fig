@@ -1,20 +1,14 @@
 import {Title, Container, Caption, Text} from "../components/";
-import {Icon} from "../components/icon";
 import {Chip} from "../components/chip";
 
 interface TransactionProps {
   title: string;
   description: string;
-  txDetails: {
-    network: string;
-    amount: number;
-    currency: string;
-    recipient: string;
-  };
   chipText: string;
+  children: any;
 }
 
-export const Transaction = ({ title, description, txDetails , chipText }: TransactionProps) => {
+export const Transaction = ({ children, title, description , chipText }: TransactionProps) => {
   return (
     <Container style={{alignItems: "flex-start", justifyContent: "space-between"}}>
       <div style={{display: "flex", alignItems: "flex-start", width: "100%", justifyContent: "space-between"}}>
@@ -24,10 +18,8 @@ export const Transaction = ({ title, description, txDetails , chipText }: Transa
         </div>
         <Chip>{chipText}</Chip>
       </div>
-      <div style={{display: "flex", textAlign: "left", flexDirection: "column"}}>
-        Network: {txDetails.network}
-        Amount: {txDetails.amount} {txDetails.currency}
-        Recipient: {txDetails.recipient}
+      <div style={{display: "flex", textAlign: "left"}}>
+        {children}
       </div>
     </Container>
   )

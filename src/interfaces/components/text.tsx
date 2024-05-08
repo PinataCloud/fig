@@ -1,7 +1,7 @@
 import {textStyles} from "../ui.ts";
 
-export const Text = ({children}: any) => {
+export const Text = ({children, style}: any) => {
   return (
-    <p style={textStyles}>{children}</p>
+    <p style={{...textStyles, ...style}}>{children}</p>
   )
 }

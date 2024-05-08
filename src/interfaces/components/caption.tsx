@@ -1,7 +1,7 @@
 import {captionStyles} from "../ui.ts";
 
-export const Caption = ({children}: any) => {
+export const Caption = ({children, style}: any) => {
   return (
-    <p style={captionStyles}>{children}</p>
+    <p style={{...captionStyles, ...style}}>{children}</p>
   )
 }
