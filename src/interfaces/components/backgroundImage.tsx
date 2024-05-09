@@ -1,4 +1,4 @@
-import {backgroundImgStyles} from "../ui.ts";
+import {backgroundImgStyles} from "../ui";
 
 export const BackgroundImage = ({backgroundUrl}: any) => {
   return (

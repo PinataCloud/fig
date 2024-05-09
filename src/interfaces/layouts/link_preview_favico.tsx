@@ -1,5 +1,4 @@
-import {Title, Container, Caption, Text} from "../components/";
-import {Icon} from "../components/icon";
+import {Title, Container, Caption, Text, Icon} from "../components/";
 
 interface LinkPreviewProps {
   title: string;

@@ -1,6 +1,4 @@
-import {Title, Container, Caption, Text} from "../components/";
-import {BackgroundImage} from "../components/backgroundImage";
-import {Icon} from "../components/icon";
+import {Title, Container, Text, Icon} from "../components/";
 import {colors} from "../ui";
 
 interface LinkPreviewProps {

@@ -1,3 +1,5 @@
+import {CSSProperties} from "react";
+
 export const colors = {
   dark: {
     background: '#000000',
@@ -199,7 +201,7 @@ export const colors = {
   },
 }
 
-export const containerStyles = {
+export const containerStyles: CSSProperties = {
   backgroundColor: '#1A1A1A',
   backgroundSize: '100% 100%',
   display: 'flex',
@@ -215,7 +217,7 @@ export const containerStyles = {
   justifyContent: "flex-end"
 }
 
-export const titleStyles = {
+export const titleStyles: CSSProperties = {
   fontSize: 64,
   fontWeight: 600,
   fontFamily: 'Noto Sans',
@@ -224,14 +226,14 @@ export const titleStyles = {
   marginTop: 12,
 }
 
-export const textStyles = {
+export const textStyles: CSSProperties = {
   fontSize: 40,
   margin: 0,
   padding: 0,
   marginTop: 12,
 }
 
-export const chipStyles = {
+export const chipStyles: CSSProperties = {
   backgroundColor: '#454545',
   borderRadius: 80,
   margin: 0,
@@ -241,7 +243,7 @@ export const chipStyles = {
   paddingLeft: 27,
 }
 
-export const captionStyles = {
+export const captionStyles: CSSProperties = {
   fontSize: 40,
   color: "#A1A1A1",
   margin: 0,
@@ -249,7 +251,7 @@ export const captionStyles = {
   marginTop: 12,
 }
 
-export const iconContainerStyles = {
+export const iconContainerStyles: CSSProperties = {
   display: "flex",
   backgroundColor: '#878787',
   borderRadius: 29,
@@ -259,7 +261,7 @@ export const iconContainerStyles = {
   justifyContent: "center",
 }
 
-export const backgroundImgStyles = {
+export const backgroundImgStyles: CSSProperties = {
   display: "flex",
   width: 600,
   height: 300,

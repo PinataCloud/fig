@@ -1,5 +1,4 @@
-import {Title, Container, Caption, Text} from "../components/";
-import {BackgroundImage} from "../components/backgroundImage";
+import {Title, Container, Caption, Text, BackgroundImage} from "../components/";
 
 interface LinkPreviewProps {
   title: string;

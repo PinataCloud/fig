@@ -1,12 +1,13 @@
-import {iconContainerStyles} from "../ui.ts";
+import {iconContainerStyles} from "../ui";
 import {icons} from "../icons";
+import {CSSProperties} from "react";
 
 interface IconProps {
   name: string;
   color?: string;
   size?: number;
   collection?: "heroicons" | "lucide" | "radix-icons";
-  style: any;
+  style?: CSSProperties | undefined;
 }
 
 export const Icon = (props: IconProps) => {

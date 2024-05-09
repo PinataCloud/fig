@@ -1,6 +1,7 @@
-import {chipStyles, textStyles} from "../ui.ts";
+import {chipStyles, textStyles} from "../ui";
+import {CSSProperties} from "react";
 
-export const Chip = ({children, style}: any) => {
+export const Chip = ({children, style}: {children: any, style?: CSSProperties | undefined;}) => {
   return (
       <p style={{
         ...textStyles,

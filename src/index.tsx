@@ -1,10 +1,7 @@
 import { createFrames, Button } from "frames.js/cloudflare-workers";
 import {imageOptionsUtils} from "./interfaces/utils";
-import {LinkPreview, LinkPreviewFavico, LinkPreviewBg} from "./interfaces/layouts";
-import {Splash} from "./interfaces/layouts/splash";
-import {Transaction} from "./interfaces/layouts/transaction";
-import {TransactionItem} from "./interfaces/components/transactionItem";
-import {ActionValidation} from "./interfaces/layouts/action_validation";
+import {LinkPreview, LinkPreviewFavico, LinkPreviewBg, Splash, About, Transaction, ActionValidation} from "./interfaces/layouts";
+import {Container, Text, Title, TransactionItem} from "./interfaces/components";
 
 type Env = {
   /**
@@ -68,6 +65,13 @@ const getInterface = (interfaceNo: number) => {
       return <ActionValidation description={"Network busy, this may take a while"} type={'warning'} />
     case 9:
       return <ActionValidation description={"You can also pay with $DEGEN"} type={'info'} />
+    case 10:
+      return <About description={"An interface to introduce a concept"} title={"About Interface"} icon={{name: 'question-mark-circle'}} />
+    case 11:
+      return <Container style={{justifyContent: "center", alignItems: "center"}}>
+        <Title>Generic Cover</Title>
+        <Text style={{textAlign: "center"}}>Cover generated with just primitive components and a couple of centering styles</Text>
+      </Container>
     default:
       return <LinkPreview
         title="Only a few interfaces available yet"
@@ -110,7 +114,7 @@ const fetch = frames(async (ctx) => {
     image: (
       <LinkPreview
         title="Frame Interface Guidelines (FIG)"
-        description="Vanilla implementation of FIG with regular css and jsx. Works with framesjs and frog"
+        description="Vanilla implementation of FIG with regular css and jsx. Works with framesjs and frog. Up to 11 available."
         url="https://github.com/PinataCloud/fig"
       />
     ),

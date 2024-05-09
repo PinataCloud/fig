@@ -1,5 +1,4 @@
-import {Title, Container, Caption, Text} from "../components/";
-import {Chip} from "../components/chip";
+import {Title, Container, Chip, Text} from "../components/";
 
 interface TransactionProps {
   title: string;
